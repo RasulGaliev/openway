@@ -611,7 +611,13 @@
             "executor": "@nx/angular:module-federation-dev-server",
             "options": {
               "port": 4200,
-              "publicHost": "http://localhost:4200"
+              "publicHost": "http://localhost:4200",
+              "devRemotes": [
+                "mf_activity",
+                "shop",
+                "profile",
+                "admin"
+              ]
             },
             "configurations": {
               "production": {
@@ -13125,6 +13131,11 @@
       },
       {
         "source": "shell",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "shell",
         "target": "admin",
         "type": "dynamic"
       },
@@ -13145,7 +13156,12 @@
       },
       {
         "source": "shell",
-        "target": "npm:@angular/common",
+        "target": "shared-models",
+        "type": "static"
+      },
+      {
+        "source": "shell",
+        "target": "npm:rxjs",
         "type": "static"
       },
       {
@@ -31251,5 +31267,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1781509232643
+  "computedAt": 1781531453520
 }

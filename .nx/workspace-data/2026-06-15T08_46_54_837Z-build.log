@@ -1,0 +1,120 @@
+
+ NX   Running target build for 4 projects:
+
+- mf_activity
+- shop
+- profile
+- admin
+
+
+
+> nx run shop:build:development  [existing outputs match the cache, left as is]
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                               | Names                     |  Raw size
+runtime.js                                        | runtime                   |  12.51 kB | 
+styles.css                                        | styles                    |   2.13 kB | 
+main.js                                           | main                      | 751 bytes | 
+
+                                                  | Initial total             |  15.39 kB
+
+Lazy chunk files                                  | Names                     |  Raw size
+apps_shop_src_bootstrap_ts.js                     | bootstrap                 |   2.13 MB | 
+apps_shop_src_app_remote-entry_entry_routes_ts.js | remote-entry-entry-routes | 904 bytes | 
+
+Build at: 2026-06-15T06:29:39.093Z - Hash: 9c26436b5fc73e7a - Time: 18107ms
+
+> nx run mf_activity:build:development  [existing outputs match the cache, left as is]
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                                      | Names                     |  Raw size
+runtime.js                                               | runtime                   |  12.53 kB | 
+styles.css                                               | styles                    |   2.15 kB | 
+main.js                                                  | main                      | 794 bytes | 
+
+                                                         | Initial total             |  15.48 kB
+
+Lazy chunk files                                         | Names                     |  Raw size
+apps_mf_activity_src_bootstrap_ts.js                     | bootstrap                 |   2.13 MB | 
+apps_mf_activity_src_app_remote-entry_entry_routes_ts.js | remote-entry-entry-routes | 953 bytes | 
+
+Build at: 2026-06-15T06:29:39.093Z - Hash: 85d8cbf66ff508b8 - Time: 18107ms
+
+> nx run profile:build:development  [existing outputs match the cache, left as is]
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                                  | Names                     |  Raw size
+runtime.js                                           | runtime                   |  12.52 kB | 
+styles.css                                           | styles                    |   2.14 kB | 
+main.js                                              | main                      | 770 bytes | 
+
+                                                     | Initial total             |  15.43 kB
+
+Lazy chunk files                                     | Names                     |  Raw size
+apps_profile_src_bootstrap_ts.js                     | bootstrap                 |   2.13 MB | 
+apps_profile_src_app_remote-entry_entry_routes_ts.js | remote-entry-entry-routes | 924 bytes | 
+
+Build at: 2026-06-15T06:29:39.092Z - Hash: dccd57896e2ddfdd - Time: 18106ms
+
+> nx run admin:build:development  [existing outputs match the cache, left as is]
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                                | Names                     |  Raw size
+runtime.js                                         | runtime                   |  12.52 kB | 
+styles.css                                         | styles                    |   2.13 kB | 
+main.js                                            | main                      | 758 bytes | 
+
+                                                   | Initial total             |  15.41 kB
+
+Lazy chunk files                                   | Names                     |  Raw size
+apps_admin_src_bootstrap_ts.js                     | bootstrap                 |   2.13 MB | 
+apps_admin_src_app_remote-entry_entry_routes_ts.js | remote-entry-entry-routes | 911 bytes | 
+
+Build at: 2026-06-15T06:29:53.992Z - Hash: f3d60f4cd56ea42c - Time: 7503ms
+
+
+
+ NX   Successfully ran target build for 4 projects
+
+Nx read the output from the cache instead of running the command for 4 out of 4 tasks.
+

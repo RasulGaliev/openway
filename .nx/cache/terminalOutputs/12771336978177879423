@@ -1,0 +1,23 @@
+
+[7m[1m[36m NX [39m[22m[27m [1mStarting module federation dev-server for [1mshell[22m[1m with 4 remotes[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mBuilding 4 static remotes...[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mBuilt 4 static remotes[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mStarting static remotes proxies...[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mStatic remotes proxies started successfully[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mAll remotes started, server ready at http://localhost:4200[22m
+
+
+[7m[1m[31m NX [39m[22m[27m  [31mPort 4200 is already in use. Use '--port' to specify a different port.[39m
+
+Pass --verbose to see the stacktrace.
+

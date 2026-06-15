@@ -1034,6 +1034,10 @@
       "apps/shell/project.json",
       "nx/core/project-json"
     ],
+    "targets.serve.options.devRemotes": [
+      "apps/shell/project.json",
+      "nx/core/project-json"
+    ],
     "targets.serve.configurations.production": [
       "apps/shell/project.json",
       "nx/core/project-json"
