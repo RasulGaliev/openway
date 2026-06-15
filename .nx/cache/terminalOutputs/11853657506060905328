@@ -1,0 +1,907 @@
+
+[7m[1m[36m NX [39m[22m[27m [1mStarting module federation dev-server for [1mshell[22m[1m with 4 remotes[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mBuilding 4 static remotes...[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mBuilt 4 static remotes[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mStarting static remotes proxies...[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mSkipping proxy for mf_activity on port 4201 - port already in use (likely served by another process)[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mSkipping proxy for shop on port 4202 - port already in use (likely served by another process)[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mSkipping proxy for profile on port 4203 - port already in use (likely served by another process)[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mSkipping proxy for admin on port 4204 - port already in use (likely served by another process)[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mStatic remotes proxies: started 0, skipped 4 (already running)[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mAll remotes started, server ready at http://localhost:4200[22m
+
+- Generating browser application bundles (phase: setup)...
+[1m[33m    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.[39m[22m
+[33mStarting up http-server, serving [39m[36mdist/apps[39m
+[33m[39m
+[33mhttp-server version: [39m[36m14.1.1[39m
+[33m[39m
+[33mhttp-server settings: [39m
+[33mCORS: [39m[36mtrue[39m
+[33mCache: [39m[36m-1 seconds[39m
+[33mConnection Timeout: [39m[36m120 seconds[39m
+[33mDirectory Listings: [39m[36mvisible[39m
+[33mAutoIndex: [39m[36mvisible[39m
+[33mServe GZIP Files: [39m[31mfalse[39m
+[33mServe Brotli Files: [39m[31mfalse[39m
+[33mDefault File Extension: [39m[31mnone[39m
+[33m[39m
+[33mAvailable on:[39m
+  http://localhost:[32m4205[39m
+Hit CTRL-C to stop the server
+
+[1m[33mCould not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+[37m[0m[0m
+[0m[1mInitial chunk files[22m                                                                                    [2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m                                                                                  [2m | [22m[2mstyles[22m       [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                                                                                                [2m | [22m[2mmain[22m         [2m | [22m[36m394.39 kB[37m[2m | [22m[0m
+[0m[32mvendor.js[37m                                                                                              [2m | [22m[2mvendor[22m       [2m | [22m[36m131.08 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1m [22m                                                                                                      [2m | [22m[1mInitial total[22m[2m | [22m  [1m1.04 MB[22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m                                                                                       [2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[0m
+[0m[32mnode_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modules_angu-f1986a.js[37m[2m | [22m[2m-[22m            [2m | [22m  [36m1.24 MB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_pnpm_angular_router_21_2_17__an_f69f00823b7d0f3521e4dcd2f8e02a6a_node_mo-2cc4fb.js[37m[2m | [22m[2m-[22m            [2m | [22m[36m310.71 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-81461c.js[37m[2m | [22m[2m-[22m            [2m | [22m[36m222.35 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-c0412e.js[37m[2m | [22m[2m-[22m            [2m | [22m[36m114.65 kB[37m[2m | [22m[0m
+[0m[32mapps_shell_src_b[39m[37mootstrap_ts.js[37m                                                                         [2m | [22m[2mbootstrap[22m    [2m | [22m [36m89.64 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_pnpm_angular_platform-browser_2_44010e990816a53c949f52267ed079e8_node_mo-7a3d03.js[37m[2m | [22m[2m-[22m            [2m | [22m [36m74.49 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_observable_of_js-nod-a0a3fb.js[37m[2m | [22m[2m-[22m            [2m | [22m [36m72.87 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_Observable_js.js[37m              [2m | [22m[2m-[22m            [2m | [22m [36m27.93 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modu-2f104f.js[37m[2m | [22m[2m-[22m            [2m | [22m [36m22.07 kB[37m[2m | [22m[0m
+[0m[32mcommon.js[37m                                                                                              [2m | [22m[2mcommon[22m       [2m | [22m [36m15.99 kB[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                       [39m[37m                                [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:12:47.004Z[37m[22m - Hash: [1m[37m2a3f55ebc820ab22[37m[22m - Time: [1m[37m7396[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+[39m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m394.39 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.88 kB[37m[2m | [22m[0m
+[0m[0m
+[0m21 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:17:14.945Z[37m[22m - Hash: [1m[37m243bd65145e31980[37m[22m - Time: [1m[37m949[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m394.39 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.88 kB[37m[2m | [22m[0m
+[0m[0m
+[0m21 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:17:22.238Z[37m[22m - Hash: [1m[37ma9358134d5949b2a[37m[22m - Time: [1m[37m547[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+(node:18780) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[37m[0m[0m
+[0m[0m
+[0m[0m
+[0m24 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:21:05.850Z[37m[22m - Hash: [1m[37ma9358134d5949b2a[37m[22m - Time: [1m[37m478[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[0m
+[0m[0m
+[0m24 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:21:07.804Z[37m[22m - Hash: [1m[37ma9358134d5949b2a[37m[22m - Time: [1m[37m439[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[0m
+[0m[0m
+[0m24 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:21:16.472Z[37m[22m - Hash: [1m[37ma9358134d5949b2a[37m[22m - Time: [1m[37m388[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[0m
+[0m[0m
+[0m24 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:21:23.372Z[37m[22m - Hash: [1m[37ma9358134d5949b2a[37m[22m - Time: [1m[37m417[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m394.39 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.73 kB[37m[2m | [22m[0m
+[0m[0m
+[0m21 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:21:43.926Z[37m[22m - Hash: [1m[37md6d0f351ec727769[37m[22m - Time: [1m[37m739[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[0m
+[0m[0m
+[0m24 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:22:00.080Z[37m[22m - Hash: [1m[37md6d0f351ec727769[37m[22m - Time: [1m[37m419[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.89 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.52 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m  [36m6.39 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:22:31.264Z[37m[22m - Hash: [1m[37mdbe2061af0996094[37m[22m - Time: [1m[37m826[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.89 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.75 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m  [36m6.49 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:22:43.341Z[37m[22m - Hash: [1m[37m2dbbf53ae360baa5[37m[22m - Time: [1m[37m800[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.89 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.52 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m  [36m6.39 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:22:50.706Z[37m[22m - Hash: [1m[37m8c4588faa93d6f00[37m[22m - Time: [1m[37m443[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.89 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.74 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m  [36m6.49 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:22:54.703Z[37m[22m - Hash: [1m[37m438bdeada5bd71d3[37m[22m - Time: [1m[37m664[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.89 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.52 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m  [36m6.39 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:22:59.496Z[37m[22m - Hash: [1m[37m8c4588faa93d6f00[37m[22m - Time: [1m[37m455[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:23:35.963Z[37m[22m - Hash: [1m[37m6be2b2ef294eafc9[37m[22m - Time: [1m[37m494[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.70 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:24:02.910Z[37m[22m - Hash: [1m[37m8a445fb6ea393c36[37m[22m - Time: [1m[37m770[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:24:07.814Z[37m[22m - Hash: [1m[37mde8528f26e9517f3[37m[22m - Time: [1m[37m461[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.70 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:25:52.975Z[37m[22m - Hash: [1m[37mb8c81a11d8871d69[37m[22m - Time: [1m[37m863[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.05 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:26:41.637Z[37m[22m - Hash: [1m[37mbea8033f6e791b57[37m[22m - Time: [1m[37m540[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[1m[31m
+[0m[91mError: [31m[0m[96mapps/shell/src/app/app.routes.ts[0m:[93m4[0m:[93m14[0m - [91merror[0m[90m TS2322: [0mType '({ path: string; component: typeof NxWelcome; } | undefined)[]' is not assignable to type 'Route[]'.
+  Type '{ path: string; component: typeof NxWelcome; } | undefined' is not assignable to type 'Route'.
+    Type 'undefined' is not assignable to type 'Route'.
+
+[7m4[0m export const appRoutes: Route[] = [
+[7m [0m [91m             ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[91m×[37m Failed to compile.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.06 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:26:43.307Z[37m[22m - Hash: [1m[37m17cc3c6be733c820[37m[22m - Time: [1m[37m443[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[1m[31m
+[0m[91mError: [31m[0m[96mapps/shell/src/app/app.routes.ts[0m:[93m17[0m:[93m2[0m - [91merror[0m[90m TS2304: [0mCannot find name 'Я'.
+
+[7m17[0m ,Я,
+[7m  [0m [91m ~[0m
+
+
+[39m[22m
+[37m
+[91m×[37m Failed to compile.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.70 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:26:44.936Z[37m[22m - Hash: [1m[37mb8c81a11d8871d69[37m[22m - Time: [1m[37m592[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:26:46.617Z[37m[22m - Hash: [1m[37mde8528f26e9517f3[37m[22m - Time: [1m[37m502[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.64 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:26:50.873Z[37m[22m - Hash: [1m[37mc01c3c254bc29452[37m[22m - Time: [1m[37m641[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m391.24 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.44 kB[37m[2m | [22m[0m
+[0m[0m
+[0m17 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:27:15.490Z[37m[22m - Hash: [1m[37mf7437722df142305[37m[22m - Time: [1m[37m1083[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.66 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:27:18.039Z[37m[22m - Hash: [1m[37ma969449c9d4a05ac[37m[22m - Time: [1m[37m466[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m391.23 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.44 kB[37m[2m | [22m[0m
+[0m[0m
+[0m17 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:27:30.950Z[37m[22m - Hash: [1m[37m4343471453b8d4a6[37m[22m - Time: [1m[37m642[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.63 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:27:33.390Z[37m[22m - Hash: [1m[37mb5624bfbb3ec95e9[37m[22m - Time: [1m[37m507[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:27:58.068Z[37m[22m - Hash: [1m[37mde8528f26e9517f3[37m[22m - Time: [1m[37m509[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.64 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:32:10.044Z[37m[22m - Hash: [1m[37m5511675ba39be9a8[37m[22m - Time: [1m[37m906[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:32:16.414Z[37m[22m - Hash: [1m[37mde8528f26e9517f3[37m[22m - Time: [1m[37m450[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.64 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:27.655Z[37m[22m - Hash: [1m[37m5511675ba39be9a8[37m[22m - Time: [1m[37m784[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:32.648Z[37m[22m - Hash: [1m[37mde8528f26e9517f3[37m[22m - Time: [1m[37m431[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.66 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:36.043Z[37m[22m - Hash: [1m[37mbdb54bf8ede23b30[37m[22m - Time: [1m[37m866[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[32m✔[39m Browser application bundle generation complete.
+[37m
+[92m√[37m Compiled successfully.[39m
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:41.826Z[37m[22m - Hash: [1m[37mde8528f26e9517f3[37m[22m - Time: [1m[37m479[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.63 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:46.237Z[37m[22m - Hash: [1m[37m0524e5f04fca3c3f[37m[22m - Time: [1m[37m582[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m391.28 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.44 kB[37m[2m | [22m[0m
+[0m[0m
+[0m17 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:51.123Z[37m[22m - Hash: [1m[37m4300e736c8aebcad[37m[22m - Time: [1m[37m609[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m389.70 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.30 kB[37m[2m | [22m[0m
+[0m[0m
+[0m15 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:54.050Z[37m[22m - Hash: [1m[37mb8c81a11d8871d69[37m[22m - Time: [1m[37m453[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m           [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mstyles.css, styles.js[37m         [2m | [22m[2mstyles[22m   [2m | [22m[36m516.78 kB[37m[2m | [22m[0m
+[0m[32mmain.js[37m                       [2m | [22m[2mmain[22m     [2m | [22m[36m386.41 kB[37m[2m | [22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m              [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m
+[0m[32mapps_shell_src_bootstrap_ts.js[37m[2m | [22m[2mbootstrap[22m[2m | [22m [36m89.15 kB[37m[2m | [22m[0m
+[0m[0m
+[0m13 unchanged chunks[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-14T20:33:59.160Z[37m[22m - Hash: [1m[37mde8528f26e9517f3[37m[22m - Time: [1m[37m457[37m[22mms[0m[39m
+[1m[33m
+[0m[33mWarning: [33m[0m[96mapps/shell/src/app/app.ts[0m:[93m6[0m:[93m13[0m - [93mwarning[0m[90m NG8113: [0mNxWelcome is not used within the template of App
+
+[7m6[0m   imports: [NxWelcome, RouterModule],
+[7m [0m [93m            ~~~~~~~~~[0m
+
+
+[39m[22m
+[37m
+[92m√[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.

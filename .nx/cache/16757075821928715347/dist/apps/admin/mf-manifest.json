@@ -1,0 +1,186 @@
+{
+  "id": "admin",
+  "name": "admin",
+  "metaData": {
+    "name": "admin",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "openway"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.mjs",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "admin",
+    "pluginVersion": "2.5.1",
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "admin:@angular/common/http",
+      "name": "@angular/common/http",
+      "version": "21.2.17",
+      "singleton": true,
+      "requiredVersion": "~21.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-c0412e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "fallback": ""
+    },
+    {
+      "id": "admin:@angular/common",
+      "name": "@angular/common",
+      "version": "21.2.17",
+      "singleton": true,
+      "requiredVersion": "~21.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-81461c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "fallback": ""
+    },
+    {
+      "id": "admin:@angular/core/primitives/di",
+      "name": "@angular/core/primitives/di",
+      "version": "21.2.17",
+      "singleton": true,
+      "requiredVersion": "~21.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "fallback": ""
+    },
+    {
+      "id": "admin:@angular/core/primitives/signals",
+      "name": "@angular/core/primitives/signals",
+      "version": "21.2.17",
+      "singleton": true,
+      "requiredVersion": "~21.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "fallback": ""
+    },
+    {
+      "id": "admin:@angular/core",
+      "name": "@angular/core",
+      "version": "21.2.17",
+      "singleton": true,
+      "requiredVersion": "~21.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modules_angu-f1986a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "fallback": ""
+    },
+    {
+      "id": "admin:@angular/platform-browser",
+      "name": "@angular/platform-browser",
+      "version": "21.2.17",
+      "singleton": true,
+      "requiredVersion": "~21.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "default-node_modules_pnpm_angular_platform-browser_2_44010e990816a53c949f52267ed079e8_node_mo-7a3d03.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "fallback": ""
+    },
+    {
+      "id": "admin:@angular/router",
+      "name": "@angular/router",
+      "version": "21.2.17",
+      "singleton": true,
+      "requiredVersion": "~21.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "default-node_modules_pnpm_angular_router_21_2_17__an_f69f00823b7d0f3521e4dcd2f8e02a6a_node_mo-2cc4fb.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "fallback": ""
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "admin:Routes",
+      "name": "Routes",
+      "assets": {
+        "js": {
+          "sync": [],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./Routes"
+    }
+  ]
+}

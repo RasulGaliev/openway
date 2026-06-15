@@ -1,0 +1,39 @@
+- Generating browser application bundles (phase: setup)...
+[1m[33m    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.[39m[22m
+[1m[33mCould not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+[32m✔[39m Browser application bundle generation complete.
+[32m✔[39m Browser application bundle generation complete.
+- Copying assets...
+[32m✔[39m Copying assets complete.
+- Generating index html...
+[32m✔[39m Index html generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m                           [2m | [22m[1mNames[22m                     [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m[0m
+[0m[32mremoteEntry.mjs[37m                               [2m | [22m[2mmf_activity[22m               [2m | [22m[36m228.51 kB[37m[2m | [22m                      [36m-[37m[0m
+[0m[32mmain.a5fcf30652022ccc.js[37m                      [2m | [22m[2mmain[22m                      [2m | [22m [36m90.41 kB[37m[2m | [22m               [36m23.89 kB[37m[0m
+[0m[32mstyles.ef46db3751d8e999.css[37m                   [2m | [22m[2mstyles[22m                    [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m[0m
+[0m[1m [22m                                             [2m | [22m[1mInitial total[22m             [2m | [22m[1m318.92 kB[22m[2m | [22m               [1m23.89 kB[22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m                              [2m | [22m[1mNames[22m                     [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m[0m
+[0m[32m475.a514f077201cf989.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m[36m312.36 kB[37m[2m | [22m               [36m88.16 kB[37m[0m
+[0m[32m672.06784a378bd55f2c.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m[36m104.87 kB[37m[2m | [22m               [36m25.07 kB[37m[0m
+[0m[32m583.54004a2418947eec.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m75.55 kB[37m[2m | [22m               [36m19.64 kB[37m[0m
+[0m[32m189.783943b44a1a70f2.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m38.94 kB[37m[2m | [22m               [36m11.13 kB[37m[0m
+[0m[32m343.eb162cd91e018f52.js[37m                       [2m | [22m[2m-[22m                    [39m[1m[33m
+[0m[33mWarning: [33m[0mc:/Users/rasul_mphv7of/Desktop/openway/apps/mf_activity/src/app/remote-entry/nx-welcome.ts-angular-inline--1.css exceeded maximum budget. Budget 4.00 kB was not met by 3.03 kB with a total of 7.03 kB.
+
+[39m[22m
+[37m     [2m | [22m [36m25.03 kB[37m[2m | [22m                [36m5.70 kB[37m[0m
+[0m[32m662.bffea7f01ca581d4.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m23.31 kB[37m[2m | [22m                [36m6.54 kB[37m[0m
+[0m[32m689.93d6be157e63a0e9.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m15.57 kB[37m[2m | [22m                [36m5.04 kB[37m[0m
+[0m[32mcommon.0ece381b0fec6021.js[37m                    [2m | [22m[2mcommon[22m                    [2m | [22m [36m10.08 kB[37m[2m | [22m                [36m3.47 kB[37m[0m
+[0m[32m566.89dfdddd336d56f2.js[37m                       [2m | [22m[2mbootstrap[22m                 [2m | [22m[36m375 bytes[37m[2m | [22m              [36m229 bytes[37m[0m
+[0m[32m__federation_expose_Routes.0919df3276547432.js[37m[2m | [22m[2m__federation_expose_Routes[22m[2m | [22m[36m176 bytes[37m[2m | [22m              [36m129 bytes[37m[0m
+[0m[32m957.f25970d249e95ec5.js[37m                       [2m | [22m[2mremote-entry-entry-routes[22m [2m | [22m[36m161 bytes[37m[2m | [22m              [36m118 bytes[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-06-15T07:31:47.004Z[37m[22m - Hash: [1m[37mc8fb43d136fe082f[37m[22m - Time: [1m[37m63863[37m[22mms[0m[39m

@@ -1,0 +1,171 @@
+
+ NX   Running target build for 4 projects:
+
+- mf_activity
+- shop
+- profile
+- admin
+
+
+
+> nx run profile:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                                                                                     | Names         |  Raw size
+main.js                                                                                                 | main          | 385.04 kB | 
+remoteEntry.mjs                                                                                         | profile       | 383.56 kB | 
+styles.css                                                                                              | styles        |   2.14 kB | 
+                                                                                                        | vendor        |   0 bytes | 
+
+                                                                                                        | Initial total | 770.73 kB
+
+Lazy chunk files                                                                                        | Names         |  Raw size
+node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modules_angu-f1986a.js | -             |   1.24 MB | 
+default-node_modules_pnpm_angular_router_21_2_17__an_f69f00823b7d0f3521e4dcd2f8e02a6a_node_mo-2cc4fb.js | -             | 310.72 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-81461c.js | -             | 222.35 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-c0412e.js | -             | 114.66 kB | 
+default-apps_profile_src_app_remote-entry_entry_ts.js                                                   | -             |  84.32 kB | 
+default-node_modules_pnpm_angular_platform-browser_2_44010e990816a53c949f52267ed079e8_node_mo-7a3d03.js | -             |  74.50 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_observable_of_js-nod-a0a3fb.js | -             |  72.87 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_Observable_js.js               | -             |  27.94 kB | 
+default-node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modu-2f104f.js | -             |  22.08 kB | 
+common.js                                                                                               | common        |  16.70 kB | 
+apps_profile_src_bootstrap_ts.js                                                                        | bootstrap     |   2.79 kB | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+
+Build at: 2026-06-14T20:12:16.596Z - Hash: 073171e2a3cf0fef - Time: 13279ms
+
+> nx run mf_activity:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                                                                                     | Names         |  Raw size
+main.js                                                                                                 | main          | 385.08 kB | 
+remoteEntry.mjs                                                                                         | mf_activity   | 383.59 kB | 
+styles.css                                                                                              | styles        |   2.15 kB | 
+                                                                                                        | vendor        |   0 bytes | 
+
+                                                                                                        | Initial total | 770.83 kB
+
+Lazy chunk files                                                                                        | Names         |  Raw size
+node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modules_angu-f1986a.js | -             |   1.24 MB | 
+default-node_modules_pnpm_angular_router_21_2_17__an_f69f00823b7d0f3521e4dcd2f8e02a6a_node_mo-2cc4fb.js | -             | 310.73 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-81461c.js | -             | 222.36 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-c0412e.js | -             | 114.67 kB | 
+default-apps_mf_activity_src_app_remote-entry_entry_ts.js                                               | -             |  84.37 kB | 
+default-node_modules_pnpm_angular_platform-browser_2_44010e990816a53c949f52267ed079e8_node_mo-7a3d03.js | -             |  74.50 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_observable_of_js-nod-a0a3fb.js | -             |  72.88 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_Observable_js.js               | -             |  27.95 kB | 
+default-node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modu-2f104f.js | -             |  22.09 kB | 
+common.js                                                                                               | common        |  16.72 kB | 
+apps_mf_activity_src_bootstrap_ts.js                                                                    | bootstrap     |   2.84 kB | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+
+Build at: 2026-06-14T20:12:16.733Z - Hash: f70e6cae5d71f191 - Time: 13410ms
+
+> nx run shop:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                                                                                     | Names         |  Raw size
+main.js                                                                                                 | main          | 385.00 kB | 
+remoteEntry.mjs                                                                                         | shop          | 383.53 kB | 
+styles.css                                                                                              | styles        |   2.13 kB | 
+                                                                                                        | vendor        |   0 bytes | 
+
+                                                                                                        | Initial total | 770.65 kB
+
+Lazy chunk files                                                                                        | Names         |  Raw size
+node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modules_angu-f1986a.js | -             |   1.24 MB | 
+default-node_modules_pnpm_angular_router_21_2_17__an_f69f00823b7d0f3521e4dcd2f8e02a6a_node_mo-2cc4fb.js | -             | 310.71 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-81461c.js | -             | 222.35 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-c0412e.js | -             | 114.65 kB | 
+default-apps_shop_src_app_remote-entry_entry_ts.js                                                      | -             |  84.28 kB | 
+default-node_modules_pnpm_angular_platform-browser_2_44010e990816a53c949f52267ed079e8_node_mo-7a3d03.js | -             |  74.49 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_observable_of_js-nod-a0a3fb.js | -             |  72.87 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_Observable_js.js               | -             |  27.93 kB | 
+default-node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modu-2f104f.js | -             |  22.07 kB | 
+common.js                                                                                               | common        |  16.68 kB | 
+apps_shop_src_bootstrap_ts.js                                                                           | bootstrap     |   2.75 kB | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+
+Build at: 2026-06-14T20:12:17.013Z - Hash: f59df2b9ab3b8d61 - Time: 13706ms
+
+> nx run admin:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files                                                                                     | Names         |  Raw size
+main.js                                                                                                 | main          | 385.01 kB | 
+remoteEntry.mjs                                                                                         | admin         | 383.54 kB | 
+styles.css                                                                                              | styles        |   2.13 kB | 
+                                                                                                        | vendor        |   0 bytes | 
+
+                                                                                                        | Initial total | 770.68 kB
+
+Lazy chunk files                                                                                        | Names         |  Raw size
+node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modules_angu-f1986a.js | -             |   1.24 MB | 
+default-node_modules_pnpm_angular_router_21_2_17__an_f69f00823b7d0f3521e4dcd2f8e02a6a_node_mo-2cc4fb.js | -             | 310.71 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-81461c.js | -             | 222.35 kB | 
+default-node_modules_pnpm_angular_common_21_2_17__an_d0ead22138726bc9a5e983775c799c02_node_mo-c0412e.js | -             | 114.65 kB | 
+default-apps_admin_src_app_remote-entry_entry_ts.js                                                     | -             |  84.29 kB | 
+default-node_modules_pnpm_angular_platform-browser_2_44010e990816a53c949f52267ed079e8_node_mo-7a3d03.js | -             |  74.49 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_observable_of_js-nod-a0a3fb.js | -             |  72.87 kB | 
+default-node_modules_pnpm_rxjs_7_8_2_node_modules_rxjs_dist_esm_internal_Observable_js.js               | -             |  27.93 kB | 
+default-node_modules_pnpm_angular_core_21_2_17__angular_compiler_21_2_17_rxjs_7_8_2_node_modu-2f104f.js | -             |  22.07 kB | 
+common.js                                                                                               | common        |  16.69 kB | 
+apps_admin_src_bootstrap_ts.js                                                                          | bootstrap     |   2.76 kB | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+
+Build at: 2026-06-14T20:12:33.874Z - Hash: 2d538f36a5ba3ed6 - Time: 9884ms
+
+
+
+ NX   Successfully ran target build for 4 projects
+
+

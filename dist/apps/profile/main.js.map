@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":";;;;;;;;;;;AAAA,mJAAqB,CAACA,KAAK,CAAEC,GAAG,IAAKC,OAAO,CAACC,KAAK,CAACF,GAAG,CAAC,CAAC,C","sources":["./apps/profile/src/main.ts"],"sourcesContent":["import('./bootstrap').catch((err) => console.error(err));\n"],"names":["catch","err","console","error"],"sourceRoot":"webpack:///","x_google_ignoreList":[]}

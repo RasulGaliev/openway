@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo '=== __TRACKED_VAR__ ===')",
+      "Bash(cat c:/Users/rasul_mphv7of/Desktop/openway/__TRACKED_VAR__)",
+      "Bash(npx nx *)"
+    ]
+  }
+}

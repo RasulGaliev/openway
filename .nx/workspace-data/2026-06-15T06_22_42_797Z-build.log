@@ -1,0 +1,72 @@
+
+ NX   Running target build for 4 projects:
+
+- mf_activity
+- shop
+- profile
+- admin
+
+
+
+> nx run shop:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+
+ NX   Cannot read properties of undefined (reading 'find')
+
+TypeError: Cannot read properties of undefined (reading 'find')
+    at mergeCustomWebpackConfig (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@nx+angular@22.7.5_69ce908cc9cb346797d91f64cf438fe0\node_modules\@nx\angular\src\builders\utilities\webpack.js:31:45)
+    at initialize (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:103:25)
+    at C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:143:30
+
+
+> nx run mf_activity:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+
+ NX   Cannot read properties of undefined (reading 'find')
+
+TypeError: Cannot read properties of undefined (reading 'find')
+    at mergeCustomWebpackConfig (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@nx+angular@22.7.5_69ce908cc9cb346797d91f64cf438fe0\node_modules\@nx\angular\src\builders\utilities\webpack.js:31:45)
+    at initialize (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:103:25)
+    at C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:143:30
+
+
+> nx run profile:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+
+ NX   Cannot read properties of undefined (reading 'find')
+
+TypeError: Cannot read properties of undefined (reading 'find')
+    at mergeCustomWebpackConfig (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@nx+angular@22.7.5_69ce908cc9cb346797d91f64cf438fe0\node_modules\@nx\angular\src\builders\utilities\webpack.js:31:45)
+    at initialize (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:103:25)
+    at C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:143:30
+
+
+> nx run admin:build:development
+
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+Could not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.
+
+ NX   Cannot read properties of undefined (reading 'find')
+
+TypeError: Cannot read properties of undefined (reading 'find')
+    at mergeCustomWebpackConfig (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@nx+angular@22.7.5_69ce908cc9cb346797d91f64cf438fe0\node_modules\@nx\angular\src\builders\utilities\webpack.js:31:45)
+    at initialize (C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:103:25)
+    at C:\Users\rasul_mphv7of\Desktop\openway\node_modules\.pnpm\@angular-devkit+build-angul_8a46679fa5de4389b303f4cdc8923a6d\node_modules\@angular-devkit\build-angular\src\builders\browser\index.ts:143:30
+
+
+
+Failed to flush telemetry: Flush reply channel closed

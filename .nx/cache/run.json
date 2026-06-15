@@ -1,0 +1,54 @@
+{
+  "run": {
+    "command": "nx run-many --target=build --projects=mf_activity,shop,profile,admin --configuration=development",
+    "startTime": "2026-06-15T08:02:10.053Z",
+    "endTime": "2026-06-15T08:02:10.109Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "shop:build:development",
+      "target": "build",
+      "projectName": "shop",
+      "hash": "15397163016693625008",
+      "startTime": "2026-06-15T08:02:10.094Z",
+      "endTime": "2026-06-15T08:02:10.107Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "mf_activity:build:development",
+      "target": "build",
+      "projectName": "mf_activity",
+      "hash": "8197579069232705768",
+      "startTime": "2026-06-15T08:02:10.094Z",
+      "endTime": "2026-06-15T08:02:10.107Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "profile:build:development",
+      "target": "build",
+      "projectName": "profile",
+      "hash": "9187042868376064028",
+      "startTime": "2026-06-15T08:02:10.094Z",
+      "endTime": "2026-06-15T08:02:10.107Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "admin:build:development",
+      "target": "build",
+      "projectName": "admin",
+      "hash": "6138702248033079955",
+      "startTime": "2026-06-15T08:02:10.094Z",
+      "endTime": "2026-06-15T08:02:10.107Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    }
+  ]
+}

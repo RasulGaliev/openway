@@ -1,0 +1,9 @@
+- Generating browser application bundles (phase: setup)...
+[1m[33m    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.[39m[22m
+[1m[33mCould not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+
+[7m[1m[31m NX [39m[22m[27m  [31mCannot read properties of undefined (reading 'find')[39m
+
+Pass --verbose to see the stacktrace.
+
