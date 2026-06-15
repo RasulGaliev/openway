@@ -4,5 +4,5 @@ export interface Transaction {
   amount: number;
   type: 'earn' | 'spend';
   description: string;
-  createdAt: Date;
+  createdAt: string;
 }

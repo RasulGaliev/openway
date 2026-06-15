@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Расул Иванов",
+      "email": "rasul@company.com",
+      "password": "123456",
+      "role": "employee",
+      "balance": 150
+    },
+    {
+      "id": "2",
+      "name": "Админ",
+      "email": "admin@company.com",
+      "password": "admin123",
+      "role": "admin",
+      "balance": 0
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Футболка Openway",
+      "description": "Стильная футболка с логотипом",
+      "price": 100,
+      "stock": 10,
+      "isActive": true,
+      "image": ""
+    },
+    {
+      "id": "2",
+      "name": "Кружка Openway",
+      "description": "Керамическая кружка 330мл",
+      "price": 50,
+      "stock": 5,
+      "isActive": true,
+      "image": ""
+    },
+    {
+      "id": "3",
+      "name": "Рюкзак Openway",
+      "description": "Вместительный рюкзак для офиса",
+      "price": 300,
+      "stock": 0,
+      "isActive": false,
+      "image": ""
+    }
+  ],
+  "activities": [
+    {
+      "id": "1",
+      "title": "Шахматный турнир",
+      "description": "Корпоративный шахматный турнир",
+      "points": 50,
+      "date": "2025-06-20",
+      "type": "tournament",
+      "createdBy": "1"
+    },
+    {
+      "id": "2",
+      "title": "Лекция по TypeScript",
+      "description": "Внутренняя лекция для команды",
+      "points": 30,
+      "date": "2025-06-25",
+      "type": "lecture",
+      "createdBy": "1"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "userId": "1",
+      "amount": 50,
+      "type": "earn",
+      "description": "Шахматный турнир",
+      "createdAt": "2025-06-01"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "amount": 100,
+      "type": "earn",
+      "description": "Лекция по TypeScript",
+      "createdAt": "2025-06-05"
+    }
+  ],
+  "orders": []
+}
