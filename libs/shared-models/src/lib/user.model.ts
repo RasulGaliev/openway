@@ -8,4 +8,6 @@ export interface User {
   password?: string;
   role: UserRole;
   balance: number;
+  /** Base64 или URL аватара, отсутствует если не загружен */
+  avatar?: string;
 }

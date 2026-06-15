@@ -1,0 +1,54 @@
+@if (facade.loading()) {
+  <div class="state-msg">Загрузка...</div>
+} @else if (facade.error()) {
+  <div class="state-msg state-msg--error">{{ facade.error() }}</div>
+} @else if (facade.user()) {
+  <div class="profile-page">
+
+    <aside class="profile-page__sidebar">
+      <div class="user-card">
+        <app-avatar-upload
+          [avatar]="facade.user()!.avatar ?? ''"
+          [initials]="initials()"
+          (avatarChange)="onAvatarChange($event)"
+        />
+
+        @if (isEditing()) {
+          <app-edit-name-form
+            [value]="facade.user()!.name"
+            (save)="onNameSave($event)"
+            (cancel)="isEditing.set(false)"
+          />
+        } @else {
+          <h2 class="user-card__name" (click)="isEditing.set(true)" title="Нажмите чтобы изменить">
+            {{ facade.user()!.name }}
+            <span class="user-card__edit-icon">✎</span>
+          </h2>
+        }
+
+        <p class="user-card__email">{{ facade.user()!.email }}</p>
+        <span class="user-card__role" [class.user-card__role--admin]="facade.user()!.role === 'admin'">
+          {{ facade.user()!.role === 'admin' ? 'Администратор' : 'Сотрудник' }}
+        </span>
+      </div>
+
+      <app-points-balance
+        [balance]="facade.user()!.balance"
+        [totalEarned]="facade.totalEarned()"
+        [totalSpent]="facade.totalSpent()"
+      />
+    </aside>
+
+    <main class="profile-page__content">
+      <div class="card">
+        <app-transaction-list [items]="facade.transactions()" />
+      </div>
+      <div class="card">
+        <app-order-list [items]="facade.orders()" />
+      </div>
+    </main>
+
+  </div>
+} @else {
+  <div class="state-msg">Нет данных</div>
+}

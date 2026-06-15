@@ -1,7 +1,7 @@
 <app-navbar
   [user]="auth.user()"
-  [name]="userService.user()?.name ?? ''"
   [balance]="userService.user()?.balance ?? 0"
+  [avatar]="userService.user()?.avatar ?? ''"
   (logout)="auth.logout()"
 />
 

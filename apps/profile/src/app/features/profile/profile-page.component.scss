@@ -1,0 +1,107 @@
+.state-msg {
+  text-align: center;
+  padding: 48px;
+  color: #999;
+  font-size: 16px;
+
+  &--error {
+    color: #c62828;
+    background: #fff8f8;
+    border: 1px solid #ffcdd2;
+    border-radius: 8px;
+    margin: 24px;
+    padding: 20px;
+  }
+}
+
+.profile-page {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.profile-page__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.user-card__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #1caded;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-card__name {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &:hover .user-card__edit-icon { opacity: 1; }
+}
+
+.user-card__edit-icon {
+  font-size: 14px;
+  color: #1caded;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.user-card__email {
+  margin: 0;
+  font-size: 13px;
+  color: #888;
+}
+
+.user-card__role {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.user-card__role--admin {
+  background: #fce4ec;
+  color: #c62828;
+}
+
+.card {
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}

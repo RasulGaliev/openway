@@ -29,10 +29,13 @@
           <span class="navbar__balance-label">баллов</span>
         </div>
 
-        <div class="navbar__user">
-          <div class="navbar__avatar">{{ initials() }}</div>
-          <span class="navbar__name">{{ name() }}</span>
-        </div>
+        <a class="navbar__avatar-link" routerLink="/profile">
+          @if (avatar()) {
+            <img class="navbar__avatar-img" [src]="avatar()" alt="Профиль" />
+          } @else {
+            <div class="navbar__avatar">{{ initials() }}</div>
+          }
+        </a>
 
         <button class="navbar__logout" type="button" (click)="logout.emit()">Выйти</button>
       } @else {
