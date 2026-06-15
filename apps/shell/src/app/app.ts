@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AuthService } from './auth/auth.service';
+import { UserService } from './core/user.service';
 import { NavbarComponent } from './navbar/navbar';
 
 @Component({
@@ -12,4 +13,5 @@ import { NavbarComponent } from './navbar/navbar';
 })
 export class App {
   protected readonly auth = inject(AuthService);
+  protected readonly userService = inject(UserService);
 }

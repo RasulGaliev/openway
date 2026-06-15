@@ -29,7 +29,16 @@
 
     <div class="navbar__right">
       @if (user()) {
-        <span class="navbar__user">{{ user()!.email }}</span>
+        <div class="navbar__balance">
+          <span class="navbar__balance-value">{{ balance() }}</span>
+          <span class="navbar__balance-label">баллов</span>
+        </div>
+
+        <div class="navbar__user">
+          <div class="navbar__avatar">{{ initials() }}</div>
+          <span class="navbar__name">{{ name() }}</span>
+        </div>
+
         <button class="navbar__logout" type="button" (click)="logout.emit()">Выйти</button>
       } @else {
         <a class="navbar__login" routerLink="/login">Войти</a>

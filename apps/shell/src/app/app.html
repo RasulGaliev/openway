@@ -1,4 +1,9 @@
-<app-navbar [user]="auth.user()" (logout)="auth.logout()" />
+<app-navbar
+  [user]="auth.user()"
+  [name]="userService.user()?.name ?? ''"
+  [balance]="userService.user()?.balance ?? 0"
+  (logout)="auth.logout()"
+/>
 
 <main class="content">
   <router-outlet />

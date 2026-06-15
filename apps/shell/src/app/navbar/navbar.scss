@@ -67,13 +67,49 @@
 .navbar__right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-left: auto;
 }
 
+.navbar__balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+}
+
+.navbar__balance-value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.navbar__balance-label {
+  font-size: 10px;
+  opacity: 0.75;
+}
+
 .navbar__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
   font-size: 13px;
-  opacity: 0.85;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.navbar__name {
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .navbar__logout {
@@ -85,6 +121,7 @@
   font-size: 13px;
   cursor: pointer;
   transition: background 0.15s;
+  white-space: nowrap;
 
   &:hover {
     background: rgba(255, 255, 255, 0.12);
