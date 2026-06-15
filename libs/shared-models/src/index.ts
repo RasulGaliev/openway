@@ -1,1 +1,3 @@
-export * from './lib/shared-models/shared-models';
+export * from './lib/user.model';
+export * from './lib/product.model';
+export * from './lib/transaction.model';
