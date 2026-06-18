@@ -5,5 +5,6 @@ export interface Product {
   price: number;
   stock: number;
   isActive: boolean;
-  image: string;
+  emoji: string;
+  category: string;
 }
