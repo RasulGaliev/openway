@@ -5,49 +5,96 @@
 } @else if (facade.user()) {
   <div class="profile-page">
 
-    <aside class="profile-page__sidebar">
-      <div class="user-card">
-        <app-avatar-upload
-          [avatar]="facade.user()!.avatar ?? ''"
-          [initials]="initials()"
-          (avatarChange)="onAvatarChange($event)"
-        />
-
-        @if (isEditing()) {
+    <div class="user-card">
+      <app-avatar-upload
+        [avatar]="facade.user()!.avatar ?? ''"
+        [initials]="initials()"
+        (avatarChange)="onAvatarChange($event)"
+      />
+      <div class="user-card__details">
+        @if (isEditingName()) {
           <app-edit-name-form
             [value]="facade.user()!.name"
             (save)="onNameSave($event)"
-            (cancel)="isEditing.set(false)"
+            (cancel)="isEditingName.set(false)"
           />
         } @else {
-          <h2 class="user-card__name" (click)="isEditing.set(true)" title="Нажмите чтобы изменить">
+          <h2 class="user-card__name" (click)="isEditingName.set(true)">
             {{ facade.user()!.name }}
             <span class="user-card__edit-icon">✎</span>
           </h2>
         }
-
         <p class="user-card__email">{{ facade.user()!.email }}</p>
-        <span class="user-card__role" [class.user-card__role--admin]="facade.user()!.role === 'admin'">
-          {{ facade.user()!.role === 'admin' ? 'Администратор' : 'Сотрудник' }}
-        </span>
+        <span class="user-card__position">{{ facade.user()!.position }}</span>
       </div>
+      <app-user-stats [user]="facade.user()!" />
+    </div>
 
-      <app-points-balance
-        [balance]="facade.user()!.balance"
-        [totalEarned]="facade.totalEarned()"
-        [totalSpent]="facade.totalSpent()"
-      />
-    </aside>
+    <div class="profile-page__body">
 
-    <main class="profile-page__content">
-      <div class="card">
-        <app-transaction-list [items]="facade.transactions()" />
-      </div>
-      <div class="card">
-        <app-order-list [items]="facade.orders()" />
-      </div>
-    </main>
+      <section class="section">
+        <div class="section__header">
+          <h3 class="section__title">
+            Активности
+            @if (facade.pendingCount()) {
+              <span class="badge badge--pending">{{ facade.pendingCount() }} на рассмотрении</span>
+            }
+          </h3>
+          <button class="btn-add" (click)="showAddForm.set(!showAddForm())">
+            {{ showAddForm() ? 'Отмена' : '+ Добавить' }}
+          </button>
+        </div>
 
+        @if (showAddForm()) {
+          <app-add-activity-form
+            [activities]="facade.activities()"
+            (submit$)="onActivitySubmit($event)"
+            (cancel)="showAddForm.set(false)"
+          />
+        }
+
+        <div class="card-list">
+          @if (facade.userActivitiesWithDetails().length === 0) {
+            <p class="empty">Активностей пока нет</p>
+          }
+          @for (item of facade.userActivitiesWithDetails(); track item.id) {
+            <app-activity-card [item]="item" />
+          }
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h3 class="section__title">
+            Достижения
+            @if (facade.achievementsPendingCount()) {
+              <span class="badge badge--pending">{{ facade.achievementsPendingCount() }} на рассмотрении</span>
+            }
+          </h3>
+          <button class="btn-add" (click)="showAddAchievementForm.set(!showAddAchievementForm())">
+            {{ showAddAchievementForm() ? 'Отмена' : '+ Добавить' }}
+          </button>
+        </div>
+
+        @if (showAddAchievementForm()) {
+          <app-add-achievement-form
+            [achievements]="facade.achievements()"
+            (submit$)="onAchievementSubmit($event)"
+            (cancel)="showAddAchievementForm.set(false)"
+          />
+        }
+
+        <div class="card-list">
+          @if (facade.userAchievementsWithDetails().length === 0) {
+            <p class="empty">Достижений пока нет</p>
+          }
+          @for (item of facade.userAchievementsWithDetails(); track item.id) {
+            <app-achievement-card [item]="item" />
+          }
+        </div>
+      </section>
+
+    </div>
   </div>
 } @else {
   <div class="state-msg">Нет данных</div>

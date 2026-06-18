@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Order, Transaction, User } from 'shared-models';
+import { Achievement, Activity, User, UserAchievement, UserActivity } from 'shared-models';
 
-/** Адаптер маппит сырой ответ API в доменные модели */
 @Injectable()
 export class ProfileAdapter {
   public toUser(raw: User | undefined): User | null {
@@ -10,34 +9,31 @@ export class ProfileAdapter {
     return user as User;
   }
 
-  public toTransaction(raw: Transaction): Transaction {
-    return {
-      id: raw.id,
-      userId: raw.userId,
-      amount: Number(raw.amount),
-      type: raw.type,
-      description: raw.description,
-      createdAt: raw.createdAt,
-    };
+  public toActivity(raw: Activity): Activity {
+    return { ...raw, coinsReward: Number(raw.coinsReward), xpReward: Number(raw.xpReward) };
   }
 
-  public toTransactions(raw: Transaction[]): Transaction[] {
-    return raw.map((t) => this.toTransaction(t));
+  public toActivities(raw: Activity[]): Activity[] {
+    return raw.map((a) => this.toActivity(a));
   }
 
-  public toOrder(raw: Order): Order {
-    return {
-      id: raw.id,
-      userId: raw.userId,
-      productId: raw.productId,
-      quantity: Number(raw.quantity),
-      totalPrice: Number(raw.totalPrice),
-      status: raw.status,
-      createdAt: raw.createdAt,
-    };
+  public toUserActivity(raw: UserActivity): UserActivity {
+    return { ...raw };
   }
 
-  public toOrders(raw: Order[]): Order[] {
-    return raw.map((o) => this.toOrder(o));
+  public toUserActivities(raw: UserActivity[]): UserActivity[] {
+    return raw.map((ua) => this.toUserActivity(ua));
+  }
+
+  public toAchievement(raw: Achievement): Achievement {
+    return { ...raw, coinsReward: Number(raw.coinsReward), xpReward: Number(raw.xpReward) };
+  }
+
+  public toAchievements(raw: Achievement[]): Achievement[] {
+    return raw.map((a) => this.toAchievement(a));
+  }
+
+  public toUserAchievements(raw: UserAchievement[]): UserAchievement[] {
+    return raw.map((ua) => ({ ...ua }));
   }
 }

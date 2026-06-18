@@ -4,10 +4,10 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  /** Не возвращать на фронтенд — только для mock бэкенда */
   password?: string;
   role: UserRole;
-  balance: number;
-  /** Base64 или URL аватара, отсутствует если не загружен */
+  position: string;
+  coins: number;
+  xp: number;
   avatar?: string;
 }

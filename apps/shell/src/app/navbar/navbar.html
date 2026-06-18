@@ -7,13 +7,19 @@
 
     <ul class="navbar__links">
       <li>
-        <a routerLink="/activity" routerLinkActive="active">Активности</a>
+        <a routerLink="/activity" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Активности</a>
+      </li>
+      <li>
+        <a routerLink="/activity/achievements" routerLinkActive="active">Достижения</a>
       </li>
       <li>
         <a routerLink="/shop" routerLinkActive="active">Магазин</a>
       </li>
       <li>
-        <a routerLink="/profile" routerLinkActive="active">Профиль</a>
+        <a routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Профиль</a>
+      </li>
+      <li>
+        <a routerLink="/profile/rating" routerLinkActive="active">Рейтинг</a>
       </li>
       @if (user()?.role === 'admin') {
         <li>
@@ -26,7 +32,7 @@
       @if (user()) {
         <div class="navbar__balance">
           <span class="navbar__balance-value">{{ balance() }}</span>
-          <span class="navbar__balance-label">баллов</span>
+          <span class="navbar__balance-label">Bivcoins</span>
         </div>
 
         <a class="navbar__avatar-link" routerLink="/profile">

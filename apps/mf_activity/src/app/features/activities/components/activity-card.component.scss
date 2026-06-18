@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: default;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,.1);
+    transform: translateY(-2px);
+  }
+}
+
+.card__icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #f0f9ff;
+  color: #1caded;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  app-icon { width: 28px; height: 28px; }
+}
+
+.card__title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.card__desc {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.card__rewards {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.reward {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+
+  &--coins { background: #fff7ed; color: #c2720a; }
+  &--xp    { background: #eff6ff; color: #1d6fcf; }
+}
+
+.card__btn {
+  margin-top: 16px;
+  padding: 10px;
+  width: 100%;
+  background: #1caded;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover { background: #18a0dc; }
+}

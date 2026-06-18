@@ -15,52 +15,50 @@
 }
 
 .profile-page {
-  display: grid;
-  grid-template-columns: 280px 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
-  align-items: start;
 }
 
-.profile-page__sidebar {
+.profile-page__nav {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 }
 
-.profile-page__content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.nav-link {
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #666;
+  transition: background 0.15s;
+
+  &:hover { background: #f0f0f0; color: #1a1a1a; }
+  &--active { background: #1caded; color: #fff; &:hover { background: #18a0dc; } }
 }
 
+// Карточка пользователя — горизонтальная
 .user-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 24px;
   padding: 24px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  text-align: center;
 }
 
-.user-card__avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: #1caded;
-  color: #fff;
-  font-size: 26px;
-  font-weight: 700;
+.user-card__details {
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .user-card__name {
-  margin: 4px 0 0;
-  font-size: 18px;
+  margin: 0;
+  font-size: 20px;
   font-weight: 600;
   color: #1a1a1a;
   cursor: pointer;
@@ -84,24 +82,77 @@
   color: #888;
 }
 
-.user-card__role {
-  display: inline-block;
-  padding: 3px 12px;
-  border-radius: 12px;
-  font-size: 12px;
+.user-card__position {
+  font-size: 13px;
+  color: #555;
   font-weight: 500;
-  background: #e3f2fd;
-  color: #1565c0;
 }
 
-.user-card__role--admin {
-  background: #fce4ec;
-  color: #c62828;
+// Основное тело
+.profile-page__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
-.card {
-  padding: 20px 24px;
+.section {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+
+  &--pending { background: #fff3e0; color: #e65100; }
+}
+
+.btn-add {
+  padding: 5px 14px;
+  background: #1caded;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+
+  &:hover { opacity: 0.85; }
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
 }

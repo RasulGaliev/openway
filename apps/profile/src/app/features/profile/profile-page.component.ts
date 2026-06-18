@@ -1,19 +1,23 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ProfileFacade } from '../../data/profile.facade';
-import { PointsBalanceComponent } from './components/points-balance.component';
-import { TransactionListComponent } from './components/transaction-list.component';
-import { OrderListComponent } from './components/order-list.component';
 import { AvatarUploadComponent } from './components/avatar-upload.component';
 import { EditNameFormComponent } from './components/edit-name-form.component';
+import { UserStatsComponent } from './components/user-stats.component';
+import { ActivityCardComponent } from './components/activity-card.component';
+import { AchievementCardComponent } from './components/achievement-card.component';
+import { AddActivityFormComponent, ActivitySubmit } from './components/add-activity-form.component';
+import { AddAchievementFormComponent, AchievementSubmit } from './components/add-achievement-form.component';
 
 @Component({
   selector: 'app-profile-page',
   imports: [
-    PointsBalanceComponent,
-    TransactionListComponent,
-    OrderListComponent,
     AvatarUploadComponent,
     EditNameFormComponent,
+    UserStatsComponent,
+    ActivityCardComponent,
+    AchievementCardComponent,
+    AddActivityFormComponent,
+    AddAchievementFormComponent,
   ],
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.scss',
@@ -21,7 +25,9 @@ import { EditNameFormComponent } from './components/edit-name-form.component';
 })
 export class ProfilePageComponent {
   protected readonly facade = inject(ProfileFacade);
-  protected readonly isEditing = signal(false);
+  protected readonly isEditingName = signal(false);
+  protected readonly showAddForm = signal(false);
+  protected readonly showAddAchievementForm = signal(false);
 
   protected readonly initials = computed(() => {
     const parts = (this.facade.user()?.name ?? '').trim().split(' ');
@@ -38,6 +44,16 @@ export class ProfilePageComponent {
 
   protected onNameSave(name: string): void {
     if (name) this.facade.updateUser({ name });
-    this.isEditing.set(false);
+    this.isEditingName.set(false);
+  }
+
+  protected onActivitySubmit(data: ActivitySubmit): void {
+    this.facade.submitActivity(data.activityId, data.comment);
+    this.showAddForm.set(false);
+  }
+
+  protected onAchievementSubmit(data: AchievementSubmit): void {
+    this.facade.submitAchievement(data.achievementId, data.comment);
+    this.showAddAchievementForm.set(false);
   }
 }

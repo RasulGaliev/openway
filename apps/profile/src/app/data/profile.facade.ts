@@ -2,17 +2,12 @@ import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-import { Order, Transaction, User } from 'shared-models';
+import { Achievement, Activity, User, UserActivity } from 'shared-models';
 import { ProfileAdapter } from './profile.adapter';
 import { ProfileStore } from './profile.store';
 
 const API_URL = 'http://localhost:3000';
 
-/**
- * Читает userId из JWT в localStorage, чтобы не зависеть от UserService shell-а напрямую.
- * Получение пользователя через шину событий — shell эмитит USER_LOGGED_IN,
- * но для начальной загрузки достаточно sub из токена.
- */
 function getUserIdFromToken(): string | null {
   const token = localStorage.getItem('openway_token');
   if (!token) return null;
@@ -32,18 +27,17 @@ export class ProfileFacade {
   private readonly adapter = inject(ProfileAdapter);
 
   public readonly user = this.store.user;
-  public readonly transactions = this.store.transactions;
-  public readonly orders = this.store.orders;
+  public readonly userActivitiesWithDetails = this.store.userActivitiesWithDetails;
+  public readonly userAchievementsWithDetails = this.store.userAchievementsWithDetails;
+  public readonly activities = this.store.activities;
+  public readonly achievements = this.store.achievements;
+  public readonly activitiesCount = this.store.activitiesCount;
+  public readonly pendingCount = this.store.pendingCount;
+  public readonly achievementsPendingCount = this.store.achievementsPendingCount;
   public readonly loading = this.store.loading;
   public readonly error = this.store.error;
-  public readonly totalEarned = this.store.totalEarned;
-  public readonly totalSpent = this.store.totalSpent;
-  public readonly ordersCount = this.store.ordersCount;
 
-  /**
-   * Загружает профиль, транзакции и заказы по userId из токена.
-   * Все три запроса выполняются параллельно через forkJoin.
-   */
+  /** Загружает все данные профиля параллельно */
   public init(): void {
     const userId = getUserIdFromToken();
     if (!userId) {
@@ -56,20 +50,24 @@ export class ProfileFacade {
 
     forkJoin({
       user: this.http.get<User>(`${API_URL}/users/${userId}`),
-      transactions: this.http.get<Transaction[]>(`${API_URL}/transactions`, { params: { userId } }),
-      orders: this.http.get<Order[]>(`${API_URL}/orders`, { params: { userId } }),
+      activities: this.http.get<Activity[]>(`${API_URL}/activities`),
+      userActivities: this.http.get<UserActivity[]>(`${API_URL}/userActivities`, { params: { userId: Number(userId) } }),
+      achievements: this.http.get<Achievement[]>(`${API_URL}/achievements`),
+      userAchievements: this.http.get<any[]>(`${API_URL}/userAchievements`, { params: { userId: Number(userId) } }),
     })
       .pipe(finalize(() => this.store.setLoading(false)))
       .subscribe({
-        next: ({ user, transactions, orders }) => {
+        next: ({ user, activities, userActivities, achievements, userAchievements }) => {
           const mapped = this.adapter.toUser(user);
           if (!mapped) {
-            this.store.setError(`Пользователь с id="${userId}" не найден в базе. Выйдите и войдите заново.`);
+            this.store.setError('Пользователь не найден. Выйдите и войдите заново.');
             return;
           }
           this.store.setUser(mapped);
-          this.store.setTransactions(this.adapter.toTransactions(transactions));
-          this.store.setOrders(this.adapter.toOrders(orders));
+          this.store.setActivities(this.adapter.toActivities(activities));
+          this.store.setUserActivities(this.adapter.toUserActivities(userActivities));
+          this.store.setAchievements(this.adapter.toAchievements(achievements));
+          this.store.setUserAchievements(this.adapter.toUserAchievements(userAchievements));
         },
         error: () => {
           this.store.setError('Не удалось загрузить данные. Проверьте что json-server запущен: pnpm api');
@@ -77,10 +75,43 @@ export class ProfileFacade {
       });
   }
 
-  /**
-   * Обновляет поля профиля через PATCH /users/:id.
-   * Принимает частичный объект — можно обновлять имя и аватар независимо.
-   */
+  /** Отправляет заявку на активность со статусом pending */
+  public submitActivity(activityId: string, comment: string): void {
+    const userId = getUserIdFromToken();
+    if (!userId) return;
+
+    const payload: Omit<UserActivity, 'id'> = {
+      userId,
+      activityId,
+      status: 'pending',
+      comment,
+      createdAt: new Date().toISOString().slice(0, 10),
+    };
+
+    this.http.post<UserActivity>(`${API_URL}/userActivities`, payload).subscribe((ua) => {
+      this.store.addUserActivity(ua);
+    });
+  }
+
+  /** Отправляет заявку на достижение со статусом pending */
+  public submitAchievement(achievementId: string, comment: string): void {
+    const userId = getUserIdFromToken();
+    if (!userId) return;
+
+    const payload: Omit<import('shared-models').UserAchievement, 'id'> = {
+      userId,
+      achievementId,
+      status: 'pending',
+      comment,
+      createdAt: new Date().toISOString().slice(0, 10),
+    };
+
+    this.http.post<import('shared-models').UserAchievement>(`${API_URL}/userAchievements`, payload).subscribe((ua) => {
+      this.store.addUserAchievement(ua);
+    });
+  }
+
+  /** Обновляет поля профиля (имя, аватар) */
   public updateUser(patch: Partial<User>): void {
     const userId = getUserIdFromToken();
     if (!userId) return;
