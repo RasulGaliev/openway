@@ -1,11 +1,14 @@
 <header class="navbar-header">
   <nav class="navbar">
-    <a class="navbar__logo" routerLink="/">
+    <a class="navbar__logo" routerLink="/profile">
       <span class="navbar__logo-name">Openway</span>
       <span class="navbar__logo-slogan">Там, где доверяют людям</span>
     </a>
 
     <ul class="navbar__links">
+      <li>
+        <a routerLink="/profile/rating" routerLinkActive="active">Рейтинг</a>
+      </li>
       <li>
         <a routerLink="/activity" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Активности</a>
       </li>
@@ -14,12 +17,6 @@
       </li>
       <li>
         <a routerLink="/shop" routerLinkActive="active">Магазин</a>
-      </li>
-      <li>
-        <a routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Профиль</a>
-      </li>
-      <li>
-        <a routerLink="/profile/rating" routerLinkActive="active">Рейтинг</a>
       </li>
       @if (user()?.role === 'admin') {
         <li>
