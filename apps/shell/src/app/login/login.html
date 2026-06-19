@@ -1,25 +1,91 @@
-<div class="login-wrapper">
-  <form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
-    <h2>Вход в Openway</h2>
+<div class="login-page">
+  <!-- Brand / hero panel -->
+  <aside class="brand-panel">
+    <div class="brand-panel__inner">
+      <div class="brand-mark">
+        <span class="brand-mark__logo">◆</span>
+        <span class="brand-mark__name">Openway</span>
+      </div>
 
-    <div class="field">
-      <label for="email">Email</label>
-      <input id="email" type="email" formControlName="email" autocomplete="email" />
+      <div class="brand-copy">
+        <h1>Единая платформа<br />для вашей команды</h1>
+        <p>Управляйте сотрудниками, активностью и магазином в одном пространстве.</p>
+      </div>
+
+      <ul class="brand-points">
+        <li><span class="dot"></span> Единый вход во все модули</li>
+        <li><span class="dot"></span> Роли и права из коробки</li>
+        <li><span class="dot"></span> Аналитика в реальном времени</li>
+      </ul>
     </div>
+    <div class="brand-glow"></div>
+  </aside>
 
-    <div class="field">
-      <label for="password">Пароль</label>
-      <input id="password" type="password" formControlName="password" autocomplete="current-password" />
-    </div>
+  <!-- Form panel -->
+  <main class="form-panel">
+    <form class="login-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <header class="login-form__head">
+        <h2>С возвращением 👋</h2>
+        <p>Войдите, чтобы продолжить работу в Openway</p>
+      </header>
 
-    @if (error()) {
-      <p class="error">{{ error() }}</p>
-    }
+      <div class="field">
+        <label for="email">Email</label>
+        <div class="control">
+          <span class="control__icon" aria-hidden="true">@</span>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            autocomplete="email"
+            placeholder="you@company.com"
+          />
+        </div>
+      </div>
 
-    <button type="submit" [disabled]="form.invalid">Войти</button>
+      <div class="field">
+        <label for="password">Пароль</label>
+        <div class="control">
+          <span class="control__icon" aria-hidden="true">∗</span>
+          <input
+            id="password"
+            [type]="showPassword() ? 'text' : 'password'"
+            formControlName="password"
+            autocomplete="current-password"
+            placeholder="Введите пароль"
+          />
+          <button
+            type="button"
+            class="control__toggle"
+            (click)="togglePassword()"
+            [attr.aria-label]="showPassword() ? 'Скрыть пароль' : 'Показать пароль'"
+          >
+            {{ showPassword() ? 'Скрыть' : 'Показать' }}
+          </button>
+        </div>
+      </div>
 
-    <p class="hint">
-      admin&#64;company.com / admin123 &nbsp;·&nbsp; rasul&#64;company.com / 123456
-    </p>
-  </form>
+      @if (error()) {
+        <p class="error" role="alert">{{ error() }}</p>
+      }
+
+      <button type="submit" class="submit" [disabled]="form.invalid">
+        Войти в систему
+      </button>
+
+      <div class="demo-creds">
+        <span class="demo-creds__label">Демо-доступ</span>
+        <div class="demo-creds__rows">
+          <button type="button" class="cred" (click)="fillDemo('admin')">
+            <span class="cred__role">Админ</span>
+            <span class="cred__email">admin&#64;company.com</span>
+          </button>
+          <button type="button" class="cred" (click)="fillDemo('employee')">
+            <span class="cred__role">Сотрудник</span>
+            <span class="cred__email">rasul&#64;company.com</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
 </div>

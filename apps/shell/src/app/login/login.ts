@@ -16,11 +16,24 @@ export class LoginComponent {
   private readonly fb = inject(FormBuilder);
 
   protected readonly error = signal('');
+  protected readonly showPassword = signal(false);
 
   protected readonly form = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
   });
+
+  protected togglePassword(): void {
+    this.showPassword.update((v) => !v);
+  }
+
+  protected fillDemo(role: 'admin' | 'employee'): void {
+    const creds =
+      role === 'admin'
+        ? { email: 'admin@company.com', password: 'admin123' }
+        : { email: 'rasul@company.com', password: '123456' };
+    this.form.setValue(creds);
+  }
 
   protected submit(): void {
     if (this.form.invalid) return;

@@ -22,19 +22,27 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
     </div>
   `,
   styles: `
-    .edit-name { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+    :host { display: block; width: 100%; }
+    .edit-name { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 320px; margin-top: 12px; }
     .edit-name__input {
-      padding: 6px 10px;
-      border: 1px solid #1caded;
-      border-radius: 6px;
-      font-size: 15px;
+      padding: 9px 12px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
       outline: none;
-      text-align: center;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      &:focus { border-color: #1caded; box-shadow: 0 0 0 4px rgba(28, 173, 237, 0.12); }
     }
-    .edit-name__actions { display: flex; gap: 8px; justify-content: center; }
-    .btn { padding: 5px 14px; border-radius: 5px; font-size: 13px; cursor: pointer; border: none; }
-    .btn--save { background: #1caded; color: #fff; }
-    .btn--cancel { background: #f0f0f0; color: #555; }
+    .edit-name__actions { display: flex; gap: 8px; }
+    .btn {
+      padding: 7px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: none;
+      transition: transform 0.12s, background 0.18s;
+      &:hover { transform: translateY(-1px); }
+    }
+    .btn--save { background: #1caded; color: #fff; box-shadow: 0 6px 14px -6px rgba(28, 173, 237, 0.6); }
+    .btn--cancel { background: #fff; color: #475569; border: 1px solid #e2e8f0; }
   `,
 })
 export class EditNameFormComponent {

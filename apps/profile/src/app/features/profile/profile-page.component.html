@@ -6,28 +6,33 @@
   <div class="profile-page">
 
     <div class="user-card">
-      <app-avatar-upload
-        [avatar]="facade.user()!.avatar ?? ''"
-        [initials]="initials()"
-        (avatarChange)="onAvatarChange($event)"
-      />
-      <div class="user-card__details">
-        @if (isEditingName()) {
-          <app-edit-name-form
-            [value]="facade.user()!.name"
-            (save)="onNameSave($event)"
-            (cancel)="isEditingName.set(false)"
+      <div class="user-card__cover"></div>
+      <div class="user-card__main">
+        <div class="user-card__avatar">
+          <app-avatar-upload
+            [avatar]="facade.user()!.avatar ?? ''"
+            [initials]="initials()"
+            (avatarChange)="onAvatarChange($event)"
           />
-        } @else {
-          <h2 class="user-card__name" (click)="isEditingName.set(true)">
-            {{ facade.user()!.name }}
-            <span class="user-card__edit-icon">✎</span>
-          </h2>
-        }
-        <p class="user-card__email">{{ facade.user()!.email }}</p>
-        <span class="user-card__position">{{ facade.user()!.position }}</span>
+        </div>
+        <div class="user-card__details">
+          @if (isEditingName()) {
+            <app-edit-name-form
+              [value]="facade.user()!.name"
+              (save)="onNameSave($event)"
+              (cancel)="isEditingName.set(false)"
+            />
+          } @else {
+            <h2 class="user-card__name" (click)="isEditingName.set(true)">
+              {{ facade.user()!.name }}
+              <span class="user-card__edit-icon">✎</span>
+            </h2>
+          }
+          <p class="user-card__email">{{ facade.user()!.email }}</p>
+          <span class="user-card__position">{{ facade.user()!.position }}</span>
+        </div>
+        <app-user-stats [user]="facade.user()!" />
       </div>
-      <app-user-stats [user]="facade.user()!" />
     </div>
 
     <div class="profile-page__body">

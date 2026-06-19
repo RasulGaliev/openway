@@ -36,20 +36,32 @@ export interface AchievementSubmit {
     </div>
   `,
   styles: `
-    .form-wrap { padding: 16px; background: #fff8f0; border-radius: 10px; border: 1px solid #ffe0b2; }
-    .form-wrap__title { margin: 0 0 14px; font-size: 15px; font-weight: 600; color: #1a1a1a; }
-    .field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
-    .field label { font-size: 13px; color: #555; }
+    .form-wrap {
+      padding: 18px; background: #fffbf5; border-radius: 14px; border: 1px solid #fde9cf;
+      animation: form-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .form-wrap__title { margin: 0 0 16px; font-size: 14px; font-weight: 700; color: #0f172a; }
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .field label { font-size: 12px; font-weight: 600; color: #475569; }
     select, textarea {
-      padding: 8px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px;
-      outline: none; font-family: inherit;
-      &:focus { border-color: #e65100; }
+      padding: 10px 12px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 14px;
+      outline: none; font-family: inherit; background: #fff; color: #0f172a;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      &:focus { border-color: #ea580c; box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.12); }
     }
     textarea { resize: vertical; }
-    .form-wrap__actions { display: flex; gap: 8px; justify-content: flex-end; }
-    .btn { padding: 7px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; border: none; }
-    .btn--primary { background: #e65100; color: #fff; &:disabled { opacity: .5; cursor: not-allowed; } }
-    .btn--cancel { background: #f0f0f0; color: #555; }
+    .form-wrap__actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 4px; }
+    .btn {
+      padding: 9px 18px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; border: none;
+      transition: transform 0.12s, box-shadow 0.18s, background 0.18s;
+    }
+    .btn--primary {
+      background: #ea580c; color: #fff; box-shadow: 0 6px 14px -6px rgba(234, 88, 12, 0.6);
+      &:hover:not(:disabled) { transform: translateY(-1px); }
+      &:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
+    }
+    .btn--cancel { background: #fff; color: #475569; border: 1px solid #e2e8f0; &:hover { background: #f8fafc; } }
+    @keyframes form-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
   `,
 })
 export class AddAchievementFormComponent {

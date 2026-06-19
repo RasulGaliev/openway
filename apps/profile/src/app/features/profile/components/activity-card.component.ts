@@ -48,33 +48,43 @@ const STATUS_LABEL: Record<UserActivity['status'], string> = {
   `,
   styles: `
     .card {
-      padding: 12px;
-      border: 1px solid #eee;
-      border-radius: 8px;
+      padding: 14px;
+      border: 1px solid #eef2f7;
+      border-radius: 14px;
+      background: #fff;
       cursor: pointer;
-      transition: background 0.15s;
-      &:hover { background: #fafafa; }
+      transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+      &:hover {
+        border-color: #dbe3ee;
+        box-shadow: 0 10px 28px -16px rgba(15, 23, 42, 0.3);
+        transform: translateY(-1px);
+      }
     }
     .card__header { display: flex; align-items: center; gap: 12px; }
     .card__icon {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: #f5f6fa;
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+      color: #475569;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0; font-size: 20px;
     }
-    .card__info { flex: 1; display: flex; flex-direction: column; }
-    .card__title { font-size: 14px; font-weight: 500; color: #1a1a1a; }
-    .card__date { font-size: 12px; color: #999; }
-    .card__status { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 500; white-space: nowrap; }
-    .card__status--approved { background: #e8f5e9; color: #2e7d32; }
-    .card__status--pending  { background: #fff3e0; color: #e65100; }
-    .card__status--rejected { background: #fce4ec; color: #c62828; }
-    .card__body { margin-top: 10px; padding-top: 10px; border-top: 1px solid #f0f0f0; }
-    .card__comment { margin: 0 0 10px; font-size: 13px; color: #555; }
-    .card__rewards { display: flex; gap: 12px; }
-    .reward { font-size: 13px; font-weight: 500; padding: 3px 10px; border-radius: 6px; }
-    .reward--coins { background: #fff3e0; color: #e65100; }
-    .reward--xp    { background: #e3f2fd; color: #1565c0; }
+    .card__info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .card__title { font-size: 14px; font-weight: 600; color: #0f172a; }
+    .card__date { font-size: 12px; color: #94a3b8; }
+    .card__status {
+      font-size: 11px; padding: 3px 10px; border-radius: 999px; font-weight: 600;
+      white-space: nowrap; display: inline-flex; align-items: center; gap: 5px;
+      &::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+    }
+    .card__status--approved { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; }
+    .card__status--pending  { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+    .card__status--rejected { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .card__body { margin-top: 12px; padding-top: 12px; border-top: 1px solid #f1f5f9; }
+    .card__comment { margin: 0 0 10px; font-size: 13px; color: #475569; line-height: 1.5; }
+    .card__rewards { display: flex; gap: 8px; }
+    .reward { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+    .reward--coins { background: #fff7ed; color: #c2410c; }
+    .reward--xp    { background: #eff6ff; color: #2563eb; }
   `,
 })
 export class ActivityCardComponent {
