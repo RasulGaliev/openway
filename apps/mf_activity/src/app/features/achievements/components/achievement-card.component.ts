@@ -31,23 +31,38 @@ import { IconComponent } from 'shared-ui';
   `,
   styles: `
     .card {
+      position: relative;
       display: flex; flex-direction: column;
       height: 100%;
-      background: #fff; border-radius: 14px; padding: 24px;
-      box-shadow: 0 1px 4px rgba(0,0,0,.07);
-      transition: box-shadow .2s, transform .2s;
-      &:hover { box-shadow: 0 6px 20px rgba(0,0,0,.1); transform: translateY(-2px); }
+      background: #fff; border: 1px solid #eef2f7; border-radius: 18px; padding: 24px;
+      box-shadow: 0 4px 16px -8px rgba(15, 23, 42, 0.1);
+      transition: box-shadow .2s, transform .2s, border-color .2s;
+      overflow: hidden;
     }
+    .card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #f59e0b, #b45309);
+      opacity: 0; transition: opacity .2s;
+    }
+    .card:hover {
+      box-shadow: 0 18px 40px -20px rgba(15, 23, 42, 0.28);
+      transform: translateY(-3px);
+      border-color: #f3dcc0;
+    }
+    .card:hover::before { opacity: 1; }
     .card__icon-wrap {
-      width: 56px; height: 56px; border-radius: 14px;
-      background: #fffbeb; color: #c2720a;
-      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
-      app-icon { width: 28px; height: 28px; }
+      width: 60px; height: 60px; border-radius: 16px;
+      background: linear-gradient(135deg, #fef3c7, #fed7aa);
+      color: #c2720a;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+      box-shadow: inset 0 0 0 1px rgba(194, 114, 10, 0.18);
+      app-icon { width: 30px; height: 30px; }
     }
-    .card__title { margin: 0 0 8px; font-size: 16px; font-weight: 600; color: #1a1a1a; }
-    .card__desc  { margin: 0; font-size: 13px; color: #666; line-height: 1.5; flex: 1; }
-    .card__rewards { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
-    .reward { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+    .card__title { margin: 0 0 8px; font-size: 17px; font-weight: 700; letter-spacing: -0.2px; color: #0f172a; }
+    .card__desc  { margin: 0; font-size: 13px; color: #64748b; line-height: 1.55; flex: 1; }
+    .card__rewards { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+    .reward { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
     .reward--coins { background: #fff7ed; color: #c2720a; }
     .reward--xp    { background: #eff6ff; color: #1d6fcf; }
   `,

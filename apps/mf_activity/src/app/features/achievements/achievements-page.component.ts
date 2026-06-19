@@ -28,12 +28,35 @@ const API_URL = 'http://localhost:3000';
     </div>
   `,
   styles: `
-    .page { display: flex; flex-direction: column; gap: 24px; }
-    .page__header { display: flex; flex-direction: column; gap: 4px; }
-    .page__title { margin: 0; font-size: 22px; font-weight: 700; color: #1a1a1a; }
-    .page__subtitle { margin: 0; font-size: 14px; color: #888; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-    .state { color: #999; text-align: center; padding: 48px; }
+    .page {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      animation: page-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .page__header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 26px 28px;
+      border-radius: 20px;
+      color: #fff;
+      background:
+        radial-gradient(90% 140% at 0% 0%, rgba(251, 191, 36, 0.95), transparent 58%),
+        radial-gradient(80% 150% at 100% 0%, rgba(234, 88, 12, 0.92), transparent 55%),
+        linear-gradient(120deg, #f59e0b 0%, #ea580c 55%, #b45309 100%);
+      box-shadow: 0 16px 40px -18px rgba(234, 88, 12, 0.5);
+    }
+    .page__title { margin: 0; font-size: 24px; font-weight: 750; letter-spacing: -0.5px; }
+    .page__subtitle { margin: 0; font-size: 14px; color: rgba(255, 255, 255, 0.88); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+    .state { color: #94a3b8; text-align: center; padding: 48px; }
+
+    @keyframes page-rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) { .page { animation: none; } }
   `,
 })
 export class AchievementsPageComponent {
