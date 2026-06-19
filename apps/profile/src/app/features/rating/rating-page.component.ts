@@ -51,38 +51,60 @@ function getCurrentUserId(): string | null {
     </div>
   `,
   styles: `
-    .rating-page { display: flex; flex-direction: column; gap: 16px; }
+    .rating-page {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      animation: rating-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
     .rating-page__header {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
+      padding: 24px 26px;
+      border-radius: 20px;
+      color: #fff;
+      background:
+        radial-gradient(90% 140% at 0% 0%, rgba(28, 173, 237, 0.95), transparent 58%),
+        radial-gradient(80% 150% at 100% 0%, rgba(67, 56, 202, 0.9), transparent 55%),
+        linear-gradient(120deg, #1caded 0%, #2563eb 50%, #4338ca 100%);
+      box-shadow: 0 16px 40px -18px rgba(37, 99, 235, 0.55);
     }
-    .rating-page__title { margin: 0; font-size: 20px; font-weight: 700; color: #1a1a1a; }
-    .rating-page__subtitle { margin: 4px 0 0; font-size: 13px; color: #999; }
+    .rating-page__title { margin: 0; font-size: 22px; font-weight: 750; letter-spacing: -0.5px; }
+    .rating-page__subtitle { margin: 5px 0 0; font-size: 13px; color: rgba(255, 255, 255, 0.82); }
 
     .btn-back {
       text-decoration: none;
       font-size: 13px;
-      color: #1caded;
-      padding: 6px 14px;
-      border: 1px solid #1caded;
-      border-radius: 6px;
+      font-weight: 600;
+      color: #fff;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 10px;
       white-space: nowrap;
-      &:hover { background: #f0f9ff; }
+      transition: background 0.15s;
+      &:hover { background: rgba(255, 255, 255, 0.15); }
     }
 
     .my-rank {
-      padding: 10px 16px;
-      background: #f0f9ff;
-      border-radius: 8px;
+      padding: 14px 18px;
+      background: rgba(28, 173, 237, 0.08);
+      border: 1px solid rgba(28, 173, 237, 0.2);
+      border-radius: 14px;
       font-size: 14px;
-      color: #0369a1;
-      strong { font-size: 16px; }
+      color: #0f172a;
+      strong { font-size: 18px; color: #1180b3; margin-left: 2px; }
     }
 
-    .list { display: flex; flex-direction: column; gap: 6px; }
-    .state { color: #999; text-align: center; padding: 32px; }
+    .list { display: flex; flex-direction: column; gap: 8px; }
+    .state { color: #94a3b8; text-align: center; padding: 40px; }
+
+    @keyframes rating-rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) { .rating-page { animation: none; } }
   `,
 })
 export class RatingPageComponent {

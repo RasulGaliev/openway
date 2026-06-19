@@ -46,39 +46,60 @@ export interface RatingUser {
       display: flex;
       align-items: center;
       gap: 14px;
-      padding: 12px 16px;
-      border-radius: 10px;
+      padding: 14px 18px;
+      border-radius: 14px;
       background: #fff;
-      transition: background 0.15s;
+      border: 1px solid #eef2f7;
+      transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
     }
-    .item--current { background: #f0f9ff; border: 1px solid #bae6fd; }
-    .item--top3 { background: #fafafa; }
+    .item:hover {
+      border-color: #dbe3ee;
+      box-shadow: 0 10px 28px -16px rgba(15, 23, 42, 0.3);
+      transform: translateY(-1px);
+    }
+    .item--current {
+      background: rgba(28, 173, 237, 0.06);
+      border-color: rgba(28, 173, 237, 0.35);
+      box-shadow: 0 0 0 1px rgba(28, 173, 237, 0.15);
+    }
+    .item--top3 { border-color: #e7ecf3; }
 
     .item__rank {
-      width: 28px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      font-size: 13px;
-      font-weight: 600;
-      color: #999;
+      font-size: 14px;
+      font-weight: 700;
+      color: #94a3b8;
       flex-shrink: 0;
     }
-    .item__rank--gold   { font-size: 18px; color: #f59e0b; }
-    .item__rank--silver { font-size: 18px; color: #94a3b8; }
-    .item__rank--bronze { font-size: 18px; color: #b45309; }
+    .item__rank--gold,
+    .item__rank--silver,
+    .item__rank--bronze {
+      font-size: 22px;
+      border-radius: 50%;
+    }
+    .item__rank--gold   { box-shadow: 0 0 0 2px #fde68a, 0 6px 14px -6px rgba(245, 158, 11, 0.7); }
+    .item__rank--silver { box-shadow: 0 0 0 2px #e2e8f0, 0 6px 14px -6px rgba(148, 163, 184, 0.6); }
+    .item__rank--bronze { box-shadow: 0 0 0 2px #fed7aa, 0 6px 14px -6px rgba(180, 83, 9, 0.6); }
 
     .item__avatar {
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: #e0f2fe;
-      color: #0369a1;
+      background: linear-gradient(135deg, #1caded, #4338ca);
+      color: #fff;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
       overflow: hidden;
+      box-shadow: 0 0 0 2px #fff, 0 2px 8px -2px rgba(28, 173, 237, 0.5);
 
       img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
     }
@@ -92,8 +113,8 @@ export interface RatingUser {
     }
     .item__name {
       font-size: 14px;
-      font-weight: 500;
-      color: #1a1a1a;
+      font-weight: 600;
+      color: #0f172a;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -102,20 +123,23 @@ export interface RatingUser {
       font-size: 11px;
       background: #1caded;
       color: #fff;
-      padding: 1px 6px;
-      border-radius: 8px;
-      font-weight: 400;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
     }
-    .item__position { font-size: 12px; color: #999; }
+    .item__position { font-size: 12px; color: #94a3b8; }
 
     .item__xp {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: baseline;
+      gap: 4px;
       flex-shrink: 0;
+      padding: 6px 12px;
+      background: rgba(28, 173, 237, 0.08);
+      border-radius: 999px;
     }
-    .item__xp-value { font-size: 16px; font-weight: 700; color: #1caded; }
-    .item__xp-label { font-size: 11px; color: #aaa; }
+    .item__xp-value { font-size: 16px; font-weight: 700; color: #1180b3; }
+    .item__xp-label { font-size: 11px; font-weight: 600; color: #5fb8e0; }
   `,
 })
 export class RatingItemComponent {
