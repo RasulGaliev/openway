@@ -7,15 +7,24 @@ import { Product } from 'shared-models';
   template: `
     <div class="card" [class.card--out]="!product().isActive || product().stock === 0"
          (click)="select.emit(product())">
-      <div class="card__emoji">{{ product().emoji }}</div>
-      <div class="card__body">
+      <div class="card__media">
+        @if (product().image) {
+          <img class="card__img" [src]="product().image" [alt]="product().name" loading="lazy" />
+        } @else {
+          <div class="card__emoji">{{ product().emoji }}</div>
+        }
         <span class="card__category">{{ product().category }}</span>
+        @if (!product().isActive || product().stock === 0) {
+          <span class="card__sold">Нет в наличии</span>
+        }
+      </div>
+      <div class="card__body">
         <h3 class="card__name">{{ product().name }}</h3>
         <p class="card__desc">{{ product().description }}</p>
       </div>
       <div class="card__footer">
         @if (!product().isActive || product().stock === 0) {
-          <span class="card__badge card__badge--out">Нет в наличии</span>
+          <span class="card__badge card__badge--out">0 шт.</span>
         } @else {
           <span class="card__badge card__badge--stock">{{ product().stock }} шт.</span>
         }
@@ -32,30 +41,44 @@ import { Product } from 'shared-models';
   styles: `
     .card {
       display: flex; flex-direction: column; height: 100%;
-      background: #fff; border-radius: 14px; overflow: hidden;
-      box-shadow: 0 1px 4px rgba(0,0,0,.07);
-      cursor: pointer; transition: box-shadow .2s, transform .2s;
-      &:hover:not(.card--out) { box-shadow: 0 8px 24px rgba(0,0,0,.11); transform: translateY(-2px); }
-      &--out { opacity: .6; cursor: default; }
+      background: #fff; border: 1px solid #eef2f7; border-radius: 18px; overflow: hidden;
+      box-shadow: 0 4px 16px -8px rgba(15,23,42,.12);
+      cursor: pointer; transition: box-shadow .2s, transform .2s, border-color .2s;
+      &:hover:not(.card--out) {
+        box-shadow: 0 20px 44px -22px rgba(15,23,42,.32); transform: translateY(-3px); border-color: #dbe3ee;
+        .card__img { transform: scale(1.05); }
+      }
+      &--out { opacity: .72; cursor: default; }
     }
-    .card__emoji {
-      height: 120px; display: flex; align-items: center; justify-content: center;
-      font-size: 56px; background: #f5f6fa;
+    .card__media {
+      position: relative; height: 180px; overflow: hidden;
+      background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
     }
-    .card__body { flex: 1; padding: 16px 16px 8px; display: flex; flex-direction: column; gap: 4px; }
-    .card__category { font-size: 11px; color: #1caded; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
-    .card__name { margin: 0; font-size: 15px; font-weight: 600; color: #1a1a1a; }
-    .card__desc { margin: 0; font-size: 12px; color: #888; line-height: 1.5; flex: 1; }
+    .card__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s ease; }
+    .card__emoji { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; }
+    .card__category {
+      position: absolute; top: 12px; left: 12px;
+      font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px;
+      color: #0f172a; background: rgba(255,255,255,.9); backdrop-filter: blur(4px);
+      padding: 4px 10px; border-radius: 999px; box-shadow: 0 2px 6px rgba(15,23,42,.12);
+    }
+    .card__sold {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: rgba(15,23,42,.5); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .3px;
+    }
+    .card__body { flex: 1; padding: 16px 16px 8px; display: flex; flex-direction: column; gap: 5px; }
+    .card__name { margin: 0; font-size: 15px; font-weight: 700; color: #0f172a; letter-spacing: -.2px; }
+    .card__desc { margin: 0; font-size: 12px; color: #64748b; line-height: 1.5; flex: 1; }
     .card__footer {
       padding: 12px 16px; display: flex; align-items: center;
-      justify-content: space-between; border-top: 1px solid #f0f0f0;
+      justify-content: space-between; border-top: 1px solid #f1f5f9;
     }
-    .card__badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 500; }
-    .card__badge--stock { background: #e8f5e9; color: #2e7d32; }
-    .card__badge--out   { background: #f5f5f5; color: #999; }
+    .card__badge { font-size: 11px; padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+    .card__badge--stock { background: #ecfdf5; color: #059669; }
+    .card__badge--out   { background: #f1f5f9; color: #94a3b8; }
     .card__price {
       display: flex; align-items: center; gap: 4px;
-      font-size: 15px; font-weight: 700; color: #c2720a;
+      font-size: 16px; font-weight: 700; color: #c2720a;
     }
   `,
 })

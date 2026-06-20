@@ -9,7 +9,13 @@ import { Product } from 'shared-models';
       <div class="modal" (click)="$event.stopPropagation()">
         <button class="modal__close" (click)="close.emit()">✕</button>
 
-        <div class="modal__emoji">{{ product().emoji }}</div>
+        <div class="modal__media">
+          @if (product().image) {
+            <img class="modal__img" [src]="product().image" [alt]="product().name" />
+          } @else {
+            <div class="modal__emoji">{{ product().emoji }}</div>
+          }
+        </div>
 
         <div class="modal__body">
           <span class="modal__category">{{ product().category }}</span>
@@ -49,43 +55,53 @@ import { Product } from 'shared-models';
   `,
   styles: `
     .overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,.45);
+      position: fixed; inset: 0; background: rgba(15,23,42,.55);
+      backdrop-filter: blur(3px);
       display: flex; align-items: center; justify-content: center;
       z-index: 1000; padding: 16px;
+      animation: fade .2s ease;
     }
     .modal {
-      background: #fff; border-radius: 18px; width: 100%; max-width: 440px;
+      background: #fff; border-radius: 22px; width: 100%; max-width: 460px;
       overflow: hidden; position: relative;
+      box-shadow: 0 30px 70px -25px rgba(15,23,42,.5);
+      animation: pop .28s cubic-bezier(.16,1,.3,1);
     }
     .modal__close {
-      position: absolute; top: 12px; right: 12px;
-      background: rgba(0,0,0,.07); border: none; border-radius: 50%;
-      width: 32px; height: 32px; cursor: pointer; font-size: 14px;
+      position: absolute; top: 14px; right: 14px; z-index: 2;
+      background: rgba(255,255,255,.85); backdrop-filter: blur(4px); border: none; border-radius: 50%;
+      width: 34px; height: 34px; cursor: pointer; font-size: 14px; color: #0f172a;
       display: flex; align-items: center; justify-content: center;
-      &:hover { background: rgba(0,0,0,.13); }
+      box-shadow: 0 2px 8px rgba(15,23,42,.18);
+      &:hover { background: #fff; }
     }
+    .modal__media { height: 220px; background: linear-gradient(135deg, #f1f5f9, #e2e8f0); }
+    .modal__img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .modal__emoji {
-      height: 160px; display: flex; align-items: center; justify-content: center;
-      font-size: 80px; background: #f5f6fa;
+      height: 100%; display: flex; align-items: center; justify-content: center; font-size: 84px;
     }
     .modal__body { padding: 24px; display: flex; flex-direction: column; gap: 8px; }
-    .modal__category { font-size: 12px; color: #1caded; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
-    .modal__name { margin: 0; font-size: 20px; font-weight: 700; color: #1a1a1a; }
-    .modal__desc { margin: 0; font-size: 14px; color: #555; line-height: 1.6; }
+    .modal__category { font-size: 11px; color: #1caded; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; }
+    .modal__name { margin: 0; font-size: 22px; font-weight: 750; color: #0f172a; letter-spacing: -.4px; }
+    .modal__desc { margin: 0; font-size: 14px; color: #475569; line-height: 1.6; }
     .modal__meta { margin: 4px 0; }
-    .badge { font-size: 12px; padding: 3px 10px; border-radius: 10px; font-weight: 500; }
-    .badge--stock { background: #e8f5e9; color: #2e7d32; }
-    .badge--out   { background: #f5f5f5; color: #999; }
-    .modal__footer { display: flex; align-items: center; gap: 16px; margin-top: 8px; flex-wrap: wrap; }
-    .modal__price { display: flex; align-items: center; gap: 6px; font-size: 20px; font-weight: 700; color: #c2720a; }
-    .modal__error { margin: 0; font-size: 13px; color: #c62828; width: 100%; }
+    .badge { font-size: 12px; padding: 4px 11px; border-radius: 999px; font-weight: 600; }
+    .badge--stock { background: #ecfdf5; color: #059669; }
+    .badge--out   { background: #f1f5f9; color: #94a3b8; }
+    .modal__footer { display: flex; align-items: center; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+    .modal__price { display: flex; align-items: center; gap: 6px; font-size: 22px; font-weight: 750; color: #c2720a; }
+    .modal__error { margin: 0; font-size: 13px; color: #dc2626; width: 100%; }
     .modal__btn {
-      margin-left: auto; padding: 11px 28px; background: #1caded; color: #fff;
-      border: none; border-radius: 8px; font-size: 15px; font-weight: 600;
-      cursor: pointer; transition: background .15s;
-      &:hover:not(:disabled) { background: #18a0dc; }
-      &:disabled { opacity: .5; cursor: not-allowed; }
+      margin-left: auto; padding: 12px 30px;
+      background: linear-gradient(135deg, #1caded, #2563eb); color: #fff;
+      border: none; border-radius: 12px; font-size: 15px; font-weight: 600;
+      cursor: pointer; transition: transform .12s, box-shadow .18s;
+      box-shadow: 0 8px 18px -8px rgba(28,173,237,.65);
+      &:hover:not(:disabled) { transform: translateY(-1px); }
+      &:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
     }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop { from { opacity: 0; transform: translateY(16px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
   `,
 })
 export class ProductDetailComponent {

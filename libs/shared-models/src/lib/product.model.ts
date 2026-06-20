@@ -7,4 +7,5 @@ export interface Product {
   isActive: boolean;
   emoji: string;
   category: string;
+  image?: string;
 }
